@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <title>Password show</title>
+
+    <style>
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: xx-large;
+            
+        }
+        .inp{
+            height: 30px;
+            width: 300px;
+            padding: 10px;
+            font-size: xx-large;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .fa_eye{
+            /* display: block; */
+
+        }
+        .fa_eye_hide{
+            display: none;
+
+        }
+
+    </style>
+</head>
+<body>
+   <div class="box">
+    <input class="inp" type="password" placeholder="Enter password">
+   
+
+    <i class="fa-solid btn fa-eye fa_eye_show"></i>
+    <i class="fa-solid  fa-eye-slash fa_eye_hide"></i>
+   </div>
+    
+
+    <script>
+        inp =document.querySelector(".inp")
+        // btn =document.querySelector(".btn")
+        fa_eye_show=document.querySelector(".fa_eye_show")
+        fa_eye_hide=document.querySelector(".fa_eye_hide")
+
+        fa_eye_show.onclick = function(){
+            if(inp.type == "password"){
+                inp.type="text";
+                fa_eye_show.style.display="none"
+                fa_eye_hide.style.display="inline-block"
+            }
+            // else{
+            //     inp.type="password"
+                
+            // }
+           
+
+          
+        }
+        fa_eye_hide.onclick = function(){
+            if(inp.type == "text"){
+                inp.type="password";
+                fa_eye_hide.style.display="none"
+                fa_eye_show.style.display="inline-block"
+                
+            }
+            // else{
+            //     inp.type="password"
+                
+            // }
+           
+
+          
+        }
+        
+        
+    </script>
+</body>
+</html>
